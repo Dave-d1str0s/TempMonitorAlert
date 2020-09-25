@@ -46,7 +46,7 @@ Automated Temperature and humidity monitor
       print()
       print("successfully sent email")
       print("Temp={0:0.1f}F Humidity={1:0.1f}%".format(ft, humidity))
-      break
+      time.sleep(900)
   else:
     continue
   time.sleep(3);
