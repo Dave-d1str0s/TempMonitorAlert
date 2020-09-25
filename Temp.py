@@ -15,15 +15,12 @@ while True:
   ts = time.time()
   st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
   if humidity is not None and temperature is not None:
+    ft = (temperature * 9/5) + 32
     if (temperature < 22.22):
-      ft = (temperature * 9/5) + 32
-      print()
+      print(" ")
       print("Temp={0:0.1f}F Humidity={1:0.1f}%".format(ft, humidity))
-      #Fahr = "Temp={}F"
-      #print(Fahr.format(round(ft, 2)))
       print(st)
     else:
-      ft = (temperature * 9/5) + 32
       port = 25
       OHSender = 'TempMonitor@email.com'
       OHReceiver = ['ITDept@email.com']
